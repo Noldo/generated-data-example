@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('users', [\App\Http\Controllers\UsersController::class, 'getUsers']);
+Route::get('posts', [\App\Http\Controllers\PostsController::class, 'getPosts']);
